@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Three() {
+function About() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold">Welcome to the Board Game Cafe!</h1>
@@ -9,4 +9,4 @@ function Three() {
   );
 }
 
-export default Three;
+export default About;
