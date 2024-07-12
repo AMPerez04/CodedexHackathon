@@ -103,6 +103,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    width: 50vw;
     padding: 20px;
   }
   

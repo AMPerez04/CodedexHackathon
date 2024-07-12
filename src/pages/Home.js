@@ -1,9 +1,11 @@
 import React from 'react';
 import './home.css';
 
+import { Link } from 'react-scroll';
+
 function Home() {
   return (
-    <div>
+    <div className="home">
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, #4E598C, rgba(0,0,0,0)), url(${require("../sandp.jpg")})`,
@@ -13,7 +15,7 @@ function Home() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="container mx-auto p-4"
+
       >
         <div className="overlay">
           <h1 className="header-title">SIP & PLAY</h1>
@@ -21,18 +23,18 @@ function Home() {
       </div>
 
       <nav className="navbar">
-        <a href="#hours-location">Hours |</a>
-        <a href="#hours-location"> Location |</a>
-        <a href="#hours-location"> Reservation |</a>
-        <a href="#hours-location"> How it Works |</a>
-        <a href="#bloom-burrow"> Bloomburrow Pre-release |</a>
-        <a href="#disney-lorcana"> Disney Lorcana Event</a>
+        <Link className="nav" to="hours" smooth={true} duration={500}>Hours</Link>
+        <Link className="nav" to="location" smooth={true} duration={500}>Location</Link>
+        <Link className="nav" to="reservation" smooth={true} duration={500}>Reservation</Link>
+        <Link className="nav" to="how-it-works" smooth={true} duration={500}>How it Works</Link>
+        <Link className="nav" to="bloom-burrow" smooth={true} duration={500}>Bloomburrow Pre-release</Link>
+        <Link className="nav" to="disney-lorcana" smooth={true} duration={500}>Disney Lorcana Event</Link>
       </nav>
 
       {/* Hours */}
-      <div id="hours-location" className="section">
-        <div>
-          <h1>WHAT ARE OUR HOURS?</h1>
+      <div id="hours" className="section">
+        <div style={{ alignItems: "left", justifyContent: "flex-start" }}>
+          <h1 style={{}}>WHAT ARE OUR HOURS?</h1>
           <p>New opening hours:</p>
           <p>Sunday: 10AM-11PM</p>
           <p>Mon-Thurs: 11AM-11PM</p>
@@ -40,13 +42,12 @@ function Home() {
           <p>Sat: 10AM-Midnight</p>
           <p>Our kitchen closes 2.5-3 hours before we close!</p>
         </div>
-        <div>
-          <h1>Visit Soon!</h1>
-        </div>
+        <img style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/sippy.png')} />
       </div>
 
       {/* Where we are */}
-      <div className="section">
+      <div style={{ justifyContent: 'space-between' }} id='location' className="section">
+        <img style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/map.png')} />
         <div>
           <h1>WHERE ARE WE LOCATED?</h1>
           <p>471 5th Ave.</p>
@@ -57,9 +58,9 @@ function Home() {
       </div>
 
       {/* Reservations */}
-      <div className="section">
+      <div id='reservation' className="section">
         <div>
-          <h1>RESERVATION</h1>
+          <h1>CAN I MAKE A RESERVATION?</h1>
           <div>
             <h2>Reservations are open for any party size!</h2>
             <p>
@@ -70,13 +71,17 @@ function Home() {
               onClick={() => window.location.href = 'https://www.exploretock.com/sipnplay/'}
               style={{
                 padding: '10px 20px',
-                backgroundColor: '#DEE9D3',
-                color: '#000',
-                border: '1px solid #000',
+                backgroundColor: '#b4bad5',
+                borderRadius: '2rem',
+                color: '#fff',
+                margin: '1rem',
+                border: '1px solid #fff',
+                width: '20vw',
                 cursor: 'pointer',
-                height: '100px',
-                width: '200px',
-                fontSize: '20px',
+                padding: '1rem',
+                fontSize: '40px',
+                fontWeight: 'bold',
+                alignSelf: 'center',
               }}
             >
               Make a Reservation!
@@ -86,7 +91,7 @@ function Home() {
       </div>
 
       {/* How it works */}
-      <div className="section">
+      <div id='how-it-works' className="section">
         <div>
           <h1>How it works</h1>
           <p>
@@ -103,45 +108,25 @@ function Home() {
       </div>
 
       {/* Bloomburron */}
-      <div className="section">
+      <div id="bloom-burrow" className="section">
         <div>
           <h1>Bloomburrow Pre-release</h1>
-          <ul>
-            <li>7/26 Bloomburrow Pre-release 6pm - <a href="https://square.link/u/vYewrAQG" target="_blank" rel="noopener noreferrer">Register</a></li>
-            <li>7/27 Bloomburrow Pre-release 11am - <a href="https://square.link/u/v0AzfRyj" target="_blank" rel="noopener noreferrer">Register</a></li>
-            <li>7/27 Bloomburrow Pre-release 5pm - <a href="https://square.link/u/pIcxnxZO" target="_blank" rel="noopener noreferrer">Register</a></li>
-            <li>7/29 Bloomburrow Pre-release 6pm - <a href="https://square.link/u/yXIMpJzp" target="_blank" rel="noopener noreferrer">Register</a></li>
+          <ul >
+            <li>7/26 Bloomburrow Pre-release 6pm - <a className="register" href="https://square.link/u/vYewrAQG" target="_blank" rel="noopener noreferrer">Register</a></li>
+            <li>7/27 Bloomburrow Pre-release 11am - <a className="register" href="https://square.link/u/v0AzfRyj" target="_blank" rel="noopener noreferrer">Register</a></li>
+            <li>7/27 Bloomburrow Pre-release 5pm - <a className="register" href="https://square.link/u/pIcxnxZO" target="_blank" rel="noopener noreferrer">Register</a></li>
+            <li>7/29 Bloomburrow Pre-release 6pm - <a className="register" href="https://square.link/u/yXIMpJzp" target="_blank" rel="noopener noreferrer">Register</a></li>
           </ul>
         </div>
-        <div
-          style={{
-            backgroundImage: `url(${require("../bloom.jpg")})`,
-            width: "100vw",
-            height: "60vh",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="container mx-auto p-4"
-        />
+        <img src={require("../bloom.jpg")}></img>
+
       </div>
 
       {/* Disney Lorcana */}
-      <div className="section">
-        <div>
+      <div id='disney-lorcana' className="section">
+        <img src={require("../dis.jpg")}></img>
+        <div style={{margin: '0 0 0 5rem'}}>
           <h1>Disney Lorcana Event</h1>
-          <div
-            style={{
-              backgroundImage: `url(${require("../dis.jpg")})`,
-              width: "50vw",
-              height: "60vh",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="container mx-auto p-4"
-          />
-          <h2>Disney Lorcana Event</h2>
           <p>
             Want to play the new Disney trading card game? We're hosting a
             Lorcana learn to play event on July 22nd 6pm! Just grab a starter
@@ -149,14 +134,7 @@ function Home() {
           </p>
           <p>Excited to see you there!</p>
         </div>
-      </div>
 
-      {/* Footer */}
-      <div className="end">
-        <p>sipnplaynyc@gmail.com</p>
-        <p>718-971-1684</p>
-        <p><br /></p>
-        <p>©2020 by Sip & Play</p>
       </div>
     </div>
   );
