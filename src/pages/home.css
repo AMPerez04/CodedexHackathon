@@ -1,9 +1,26 @@
 
   .navbar {
-    background-color: #DBB1BC;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #4E598C;
     color: white;
     text-align: center;
     padding: 1px 0;
+    padding: 2vw 10vw 0 10vw;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .home {
+    color: white;
+  }
+
+  .nav {
+    background-color: #b4bad580;
+    padding: 1vh;
+    border-radius: 1vw;
   }
 
   .section {
@@ -11,6 +28,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 10vh;
+    color: white;
     width: 80vw;
   }
   
@@ -34,17 +52,61 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #DEE9D3;
-    color:black;
+    background-color: #4E598C;
 
   }
  
+
+  @media (max-width: 800px) {
+    .navbar {
+      display: none;
+    }
+  }
+
   .end{
     text-align: center;
   }
-  h1{
+
+  h1 {
     text-align: left;
-    margin-top: 10vh;
-    font-size: 2.5rem;
+    margin: 0 0vh 1vh 0;
+    font-size: 4rem;
     font-weight: bold;
+    color: #fff;
+    border-bottom-width: 1px;
+  }
+
+  h2 {
+    text-align: left;
+    margin: 0 0vh 1vh 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  p {
+    text-align: left;
+    font-size: 2.0rem;
+    color: #fff;
+  }
+
+  ul {
+    text-align: left;
+    font-size: 2.0rem;
+    color: #fff;
+  }
+
+  .register  {
+    text-align: left;
+    font-size: 2.0rem;
+    color: orange;
+    text-decoration: underline;
+  }
+
+  .end {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+
+
   }
