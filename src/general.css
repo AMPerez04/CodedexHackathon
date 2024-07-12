@@ -3,6 +3,7 @@ p.menu {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Add more styles here */
 }
 
@@ -11,6 +12,7 @@ h1.menu {
     font-size: 5rem;
     font-weight: bold;
     color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Add more styles here */
 }
 
@@ -19,6 +21,7 @@ h2.menu {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Add more styles here */
 }
 
@@ -27,6 +30,7 @@ h3.menu {
     font-size: 20px;
     font-weight: bold;
     color: #666;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Add more styles here */
 }
 
@@ -35,6 +39,7 @@ h4.menu {
     font-size: 18px;
     font-weight: bold;
     color: #999;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Add more styles here */
 }
 
@@ -45,6 +50,7 @@ h4.menu {
 
 .section-header {
     margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .menu-section {
@@ -73,6 +79,7 @@ h4.menu {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s linear;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -91,7 +98,6 @@ h4.menu {
 .section-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: 1170px;
     flex-direction: column;
     align-items: center;
     display: flex;
@@ -106,6 +112,7 @@ h4.menu {
     gap: 20px;
     width: 50vw;
     padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   .menu-item {
@@ -115,4 +122,5 @@ h4.menu {
     padding: 24px;
     text-align: center;
     box-shadow:  2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
