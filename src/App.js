@@ -36,10 +36,10 @@ function App() {
 							<Link to="/library" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">3D-Library</Link>
 						</li>
 						<li>
-							<Link to="/reserve" className="text-white hover:text-gray-400">Reserve</Link>
+							<Link to="/reserve" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Reserve</Link>
 						</li>
 						<li>
-							<Link to="/feedback" className="text-white hover:text-gray-400">Feedback</Link>
+							<Link to="/feedback" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Feedback</Link>
 						</li>
 					</ul>
 				</nav>
