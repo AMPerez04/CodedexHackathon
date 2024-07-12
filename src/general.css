@@ -1,0 +1,117 @@
+/* General CSS styles for <p> */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    /* Add more styles here */
+}
+
+/* General CSS styles for <h1> */
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #000;
+    /* Add more styles here */
+}
+
+/* General CSS styles for <h2> */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* Add more styles here */
+}
+
+/* General CSS styles for <h3> */
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    /* Add more styles here */
+}
+
+/* General CSS styles for <h4> */
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+    /* Add more styles here */
+}
+
+.underline {
+    border-width: 1px;
+    text-decoration: underline;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 70vh;
+
+}
+
+.filter-btn-active{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 3rem;
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+}
+
+.filter-btn{
+    font-size: 3rem;
+    margin: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 2rem 1.5rem;
+    justify-items: center;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 50vw;
+    padding: 20px;
+  }
+  
+  .menu-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
