@@ -33,11 +33,11 @@ function App() {
 	return (
 		<Router>
 			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw", zIndex: 1000}}>
-				<div className="bg-white rounded-full w-20 h-20 flex items-center justify-center m-4 shadow-lg">
-					<img src={require('./sipnplay.png')} alt="Logo" className="w-20 h-20" />
+				<div className="bg-white rounded-full w-16 h-16 flex items-center justify-center m-4 shadow-lg">
+					<img src={require('./sipnplay.png')} alt="Logo" className="w-16 h-16" />
 				</div>
 				<nav className="ml-auto">
-					<ul className="flex space-x-12">
+					<ul className="flex space-x-11">
 					<li>
 							<Link to="/" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
 						</li>
