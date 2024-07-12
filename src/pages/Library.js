@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useLoader  } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Shelf from '../components/Shelf';
 import BoardGame from '../components/BoardGame';
@@ -9,6 +9,7 @@ import * as THREE from 'three';
 function Library() {
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
+  const brickTexture = useLoader(THREE.TextureLoader, '/assets/brick.jpg');
 
   return (
     <div style={{ height: '90vh', display: 'flex', flexDirection: 'row' }}>
@@ -35,25 +36,25 @@ function Library() {
 
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
           <planeGeometry args={[10, 10]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial color="grey" />
         </mesh>
 
         {/* Walls */}
         <mesh position={[0, -1.5, -5]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[0, -1.5, 5]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[-5, -1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[5, -1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
 
         {/* middle */}
@@ -117,7 +118,7 @@ function Library() {
         </group>
       </Canvas>
       <div style={{ width: '30vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', alignContent: 'center', backgroundColor: '#4E598C'}}>
-        <h1 style={{textAlign: 'center', color: 'white'}}>{selectedGame}</h1>
+        <h1 className='library' style={{textAlign: 'center', color: 'white'}}>{selectedGame}</h1>
         <Canvas style={{ height: '40vh', width: '40vh', backgroundColor: '#b4bad5', borderRadius: "30px" }}>
           <ambientLight intensity={0.4} />
           <directionalLight position={[5, 10, 7.5]} intensity={1} />
@@ -126,7 +127,12 @@ function Library() {
               <BoardGame path={selectedModel} />
             </group>
           )}
+
+
         </Canvas>
+        {selectedModel === "/assets/board_game_boxes.glb" && (
+            <a href='https://docs.google.com/spreadsheets/d/1-TOvwUh-ziCB6QmLYvQlxtXuBd-aGiiO72GWAasby8o/edit?gid=0#gid=0' style={{ color: 'white', fontWeight: 'bold', fontSize: '3rem'}}>Visit our selection</a>
+          )}
       </div>
     </div>
   );
