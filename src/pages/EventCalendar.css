@@ -3,10 +3,6 @@
   font-size: 12px;
 }
 
-body {
-  background-color: #EAF0F3;
-}
-
 /* Additional responsive styling */
 @media (max-width: 640px) {
   .container {
