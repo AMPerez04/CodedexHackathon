@@ -14,13 +14,13 @@ import Feedback from './pages/Feedback';
 function App() {
 	return (
 		<Router>
-			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw"}}>
+			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw", zIndex: 1000}}>
 				<div className="bg-white rounded-full w-20 h-20 flex items-center justify-center m-4 shadow-lg">
 					<img src={require('./sipnplay.png')} alt="Logo" className="w-20 h-20" />
 				</div>
 				<nav className="ml-auto">
 					<ul className="flex space-x-12">
-						<li>
+					<li>
 							<Link to="/" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
 						</li>
 						<li>
@@ -36,10 +36,10 @@ function App() {
 							<Link to="/library" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">3D-Library</Link>
 						</li>
 						<li>
-							<Link to="/reserve" className="text-white hover:text-gray-400">Reserve</Link>
+							<Link to="/reserve" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Reserve</Link>
 						</li>
 						<li>
-							<Link to="/feedback" className="text-white hover:text-gray-400">Feedback</Link>
+							<Link to="/feedback" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Feedback</Link>
 						</li>
 					</ul>
 				</nav>
