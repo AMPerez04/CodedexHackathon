@@ -4,6 +4,8 @@ function Reserve() {
   return (
     <div className="container mx-auto p-4">
       {/* reservation*/}
+
+      
       <div className='section'>
         <div>
           <h1>RESERVATION DETAILS</h1>
@@ -28,7 +30,7 @@ function Reserve() {
             Reserve Now!
           </button>
           <div style={{
-            backgroundImage: `url(${require("./sips.jpg")})`, width: "50vw",
+            backgroundImage: `url(${require("./sips.jpg")})`, width: "50vw", alt: "An image of the exterior of Sip & Play NYC",
             height: "60vh", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
           }} className="container mx-auto p-4">
           </div>

@@ -7,7 +7,7 @@ function Home() {
     <div>
 
       <div style={{
-        backgroundImage: `linear-gradient(to bottom, #4E598C, rgba(0,0,0,0)), url(${require("../sandp.jpg")})`, width: "100vw",
+        backgroundImage: `linear-gradient(to bottom, #4E598C, rgba(0,0,0,0)), url(${require("../sandp.jpg")})`, width: "100vw", alt:"an image of the board game cafe Sip & Play", 
         height: "60vh", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
       }} className="container mx-auto p-4">
         <div className="overlay">
@@ -92,7 +92,7 @@ function Home() {
           </ul>
         </div>
         <div style={{
-          backgroundImage: `url(${require("../bloom.jpg")})`, width: "100vw",
+          backgroundImage: `url(${require("../bloom.jpg")})`, width: "100vw", alt:"Art of upcomign boardgame Bloomburrow",
           height: "60vh", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
         }} className="container mx-auto p-4">
         </div></div>
@@ -101,7 +101,7 @@ function Home() {
       <div className='section'>
         <div><h1>Disney Lorcana Even</h1>
           <div style={{
-            backgroundImage: `url(${require("../dis.jpg")})`, width: "50vw",
+            backgroundImage: `url(${require("../dis.jpg")})`, width: "50vw", alt:"Art of a Disney Lorcana card game event",
             height: "60vh", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
           }} className="container mx-auto p-4">
           </div>
