@@ -75,7 +75,7 @@ function App() {
 					</ul>
 				</nav>
 			</div>
-
+			<div style={{ borderBottom: '1px solid white' }}></div>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/calendar" element={<EventCalendar />} />

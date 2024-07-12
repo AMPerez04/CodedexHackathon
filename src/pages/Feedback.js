@@ -6,8 +6,8 @@ function Feedback() {
           {/* feedback*/}
           <div className='section'>
             <div>
-              <h1 className='res'>RESERVATION DETAILS</h1>
-              <p>Submit general questions, suggestions, and boardgame recommendations below!</p>
+              <h1 className='res'>Feedback</h1>
+              <p className='tex'>Submit general questions, suggestions, and boardgame recommendations below!</p>
               <p>{ }</p>
               <form className="feedback-form">
               <div className="form-group">
