@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import EventCalendar from './pages/EventCalendar';
 import Menu from './pages/Menu';
-import About from './pages/About';
 import Library from './pages/Library';
 import Reserve from './pages/Reserve';
 import Feedback from './pages/Feedback';
@@ -58,9 +57,6 @@ function App() {
 							<Link to="/menu" className="nav-link" onClick={toggleDropdown}>Menu</Link>
 						</li>
 						<li>
-							<Link to="/about" className="nav-link" onClick={toggleDropdown}>About</Link>
-						</li>
-						<li>
 							<Link to="/library" className="nav-link" onClick={toggleDropdown}>3D-Library</Link>
 						</li>
 						<li>
@@ -83,7 +79,6 @@ function App() {
 					filterItems={filterItems}
 					activeCategory={activeCategory}
 					categories={categories} />} />
-				<Route path="/about" element={<About />} />
 				<Route path="/library" element={<Library />} />
 				<Route path="/reserve" element={<Reserve />} />
 				<Route path="/feedback" element={<Feedback />} />

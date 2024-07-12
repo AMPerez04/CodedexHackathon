@@ -1,22 +1,36 @@
-.footer {
+.event-calendar.footer {
   text-align: center;
   font-size: 12px;
 }
 
+.calendar {
+    width: 50%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.event-calendar.main {
+  background-color: #b4bad5;
+  width: 100vw;
+  justify-self: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
 /* Additional responsive styling */
 @media (max-width: 640px) {
-  .container {
+    .event-calendar.container {
     padding: 1rem;
   }
 
-  h1 {
+  h1.event-calendar {
     font-size: 1.5rem;
   }
 }
-.end{
+.end.event-calendar{
     text-align: center;
     font-size: 12px;
   }
-  body {
+   body.event-calendar {
     background-color: #4E598C;
   }

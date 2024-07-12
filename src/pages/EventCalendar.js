@@ -5,12 +5,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 
 function EventCalendar() {
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-center">
-        <h1 className="text-3xl font-bold text-center">Event Calendar</h1>
+    <div className="event-calendar main">
+      <div className=" event-calendar flex justify-center">
+        <h1 className="event-calendar text-3xl font-bold text-center">Event Calendar</h1>
       </div>
-
+      <div className="calendar">
       <FullCalendar
+        
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
         events={[
@@ -29,16 +30,11 @@ function EventCalendar() {
           { title: 'Modern 7pm', date: '2024-08-01' },
           { title: 'Modern 7pm', date: '2024-07-25' },
         ]}
-      />
+      /></div>
 
-      {/* Footer */}
-      <div className="footer mt-4 text-center">
-        <p>sipnplaynyc@gmail.com</p>
-        <p>718-971-1684</p>
-        <p>©2020 by Sip & Play</p>
-      </div>
     </div>
   );
 }
+
 
 export default EventCalendar;
