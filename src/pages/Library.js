@@ -127,7 +127,12 @@ function Library() {
               <BoardGame path={selectedModel} />
             </group>
           )}
+
+
         </Canvas>
+        {selectedModel === "/assets/board_game_boxes.glb" && (
+            <a href='https://docs.google.com/spreadsheets/d/1-TOvwUh-ziCB6QmLYvQlxtXuBd-aGiiO72GWAasby8o/edit?gid=0#gid=0' style={{ color: 'white', fontWeight: 'bold', fontSize: '3rem'}}>Visit our selection</a>
+          )}
       </div>
     </div>
   );
