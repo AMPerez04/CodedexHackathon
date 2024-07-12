@@ -7,6 +7,9 @@ import EventCalendar from './pages/EventCalendar';
 import Menu from './pages/Menu';
 import About from './pages/About.js';
 import Library from './pages/Library.js';
+import Reserve from './pages/Reserve';
+import Feedback from './pages/Feedback';
+
 
 function App() {
 	return (
@@ -32,6 +35,12 @@ function App() {
 						<li>
 							<Link to="/library" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">3D-Library</Link>
 						</li>
+						<li>
+							<Link to="/reserve" className="text-white hover:text-gray-400">Reserve</Link>
+						</li>
+						<li>
+							<Link to="/feedback" className="text-white hover:text-gray-400">Feedback</Link>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -41,6 +50,8 @@ function App() {
 				<Route path="/menu" element={<Menu />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/library" element={<Library />} />
+				<Route path="/reserve" element={<Reserve />} />
+				<Route path="/feedback" element={<Feedback/>} />
 			</Routes>
 		</Router>
 
