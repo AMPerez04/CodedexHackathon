@@ -1,5 +1,5 @@
 /* General CSS styles for <p> */
-p {
+p.menu {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -7,7 +7,7 @@ p {
 }
 
 /* General CSS styles for <h1> */
-h1 {
+h1.menu {
     font-size: 5rem;
     font-weight: bold;
     color: #000;
@@ -15,7 +15,7 @@ h1 {
 }
 
 /* General CSS styles for <h2> */
-h2 {
+h2.menu {
     font-size: 24px;
     font-weight: bold;
     color: #333;
@@ -23,7 +23,7 @@ h2 {
 }
 
 /* General CSS styles for <h3> */
-h3 {
+h3.menu {
     font-size: 20px;
     font-weight: bold;
     color: #666;
@@ -31,7 +31,7 @@ h3 {
 }
 
 /* General CSS styles for <h4> */
-h4 {
+h4.menu {
     font-size: 18px;
     font-weight: bold;
     color: #999;

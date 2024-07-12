@@ -117,7 +117,7 @@ function Library() {
         </group>
       </Canvas>
       <div style={{ width: '30vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', alignContent: 'center', backgroundColor: '#4E598C'}}>
-        <h1 style={{textAlign: 'center', color: 'white'}}>{selectedGame}</h1>
+        <h1 className='library' style={{textAlign: 'center', color: 'white'}}>{selectedGame}</h1>
         <Canvas style={{ height: '40vh', width: '40vh', backgroundColor: '#b4bad5', borderRadius: "30px" }}>
           <ambientLight intensity={0.4} />
           <directionalLight position={[5, 10, 7.5]} intensity={1} />

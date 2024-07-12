@@ -23,7 +23,7 @@ const Menu = ({ items, filterItems, activeCategory, categories }) => {
       </div>
       <section className="menu-section">
         <div className="title">
-          <h1 className='section-header'>Our Menu</h1>
+          <h1 className='menu section-header'>Our Menu</h1>
           <div className="underline"></div>
         </div>
           <Categories
@@ -39,8 +39,8 @@ const Menu = ({ items, filterItems, activeCategory, categories }) => {
           <article key={id} className="menu-item">
             <div className="item-info">
               <header>
-                <h2 className='item-name'>{title}</h2>
-                <h2 className="price">{price}</h2>
+                <h2 className=' menu item-name'>{title}</h2>
+                <h2 className=" menu price">{price}</h2>
               </header>
             </div>
           </article>
