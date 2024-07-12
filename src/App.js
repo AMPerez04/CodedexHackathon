@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import EventCalendar from './pages/EventCalendar';
@@ -10,8 +10,26 @@ import Library from './pages/Library.js';
 import Reserve from './pages/Reserve';
 import Feedback from './pages/Feedback';
 
+import items from './data';
+
+const allCategories = ["All", ...new Set(items.map((item) => item.category))];
 
 function App() {
+	const [menuItems, setMenuItems] = useState(items);
+	const [activeCategory, setActiveCategory] = useState("");
+	const [categories, setCategories] = useState(allCategories);
+
+	const filterItems = (category) => {
+	setActiveCategory(category);
+	
+	if (category === "all") {
+		setMenuItems(items);
+		return;
+	}
+
+	const newItems = items.filter((item) => item.category === category);
+	setMenuItems(newItems);
+	};
 	return (
 		<Router>
 			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw", zIndex: 1000}}>
@@ -44,10 +62,14 @@ function App() {
 					</ul>
 				</nav>
 			</div>
+			
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/calendar" element={<EventCalendar />} />
-				<Route path="/menu" element={<Menu />} />
+				<Route path="/menu" element={<Menu items={menuItems} 
+					filterItems={filterItems} 
+					activeCategory={activeCategory} 
+					categories={categories} />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/library" element={<Library />} />
 				<Route path="/reserve" element={<Reserve />} />

@@ -1,47 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect }  from "react";
+import Categories from "../Categories";
 import { Canvas } from '@react-three/fiber';
-import { Box,Text} from '@react-three/drei';
+import '../general.css';
+import Carousel from '../Carousel';
+import { OrbitControls } from '@react-three/drei';
 
-function Menu() {
-  const menuItems = [
-    { name: 'Burger', cost: '$10' },
-    { name: 'Pizza', cost: '$12' },
-    { name: 'Salad', cost: '$8' },
-    { name: 'Pasta', cost: '$9' },
-    // Add more items here
-  ];
-
+const Menu = ({ items, filterItems, activeCategory, categories }) => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold">Menu</h1>
-      <div className="flex justify-center mt-8">
-        <div className="w-1/2">
-          <Canvas>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            {menuItems.map((item, index) => (
-              <Box key={index} position={[-1.2 + index * 1.2, 0, 0]}>
-                <meshStandardMaterial attach="material" color="orange" />
-                <Text
-                  position={[0, 0, 0.5]}
-                  fontSize={0.2}
-                  anchorX="center"
-                  anchorY="middle"
-                  outlineColor="black"
-                  outlineWidth={0.02}
-                  outlineOpacity={1}
-                  color="white"
-                  textAlign="center"
-                >
-                  {`${item.name}\n${item.cost}`}
-                </Text>
-              </Box>
-            ))}
-          </Canvas>
+    <div className="section-center">
+      <div style={{ height: '40vh', width: '100vw' }}>
+        <Canvas>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} />
+            <OrbitControls maxPolarAngle={Math.PI / 2} 
+              minPolarAngle={Math.PI / 2}
+              maxZoom={0} minZoom={0}
+              maxDistance={4.5} minDistance={4.5}/>
+            <group position={[0, -0.75, 0]}>  
+              <Carousel />
+            </group>
+        </Canvas>
+      </div>
+      <section className="menu-section">
+        <div className="title">
+          <h1 className='section-header'>Our Menu</h1>
+          <div className="underline"></div>
         </div>
+          <Categories
+          categories={categories}
+          activeCategory={activeCategory}
+          filterItems={filterItems}
+          />
+      </section>
+      <div className="menu-items">
+      {items.map((item) => {
+        const { id, title, category, price, is3D, file } = item;
+        return (
+          <article key={id} className="menu-item">
+            <div className="item-info">
+              <header>
+                <h4 className='item-name'>{title}</h4>
+                <h4 className="price">{price}</h4>
+              </header>
+            </div>
+          </article>
+        );
+      })}
       </div>
     </div>
   );
-}
+};
 
 export default Menu;
