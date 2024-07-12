@@ -13,7 +13,6 @@ function Home() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="container mx-auto p-4"
       >
         <div className="overlay">
           <h1 className="header-title">SIP & PLAY</h1>
@@ -68,16 +67,7 @@ function Home() {
             </p>
             <button
               onClick={() => window.location.href = 'https://www.exploretock.com/sipnplay/'}
-              style={{
-                padding: '10px 20px',
-                backgroundColor: '#DEE9D3',
-                color: '#000',
-                border: '1px solid #000',
-                cursor: 'pointer',
-                height: '100px',
-                width: '200px',
-                fontSize: '20px',
-              }}
+              className="reservation-button"
             >
               Make a Reservation!
             </button>

@@ -29,11 +29,18 @@ function Reserve() {
           >
             Reserve Now!
           </button>
-          <div style={{
-            backgroundImage: `url(${require("./sips.jpg")})`, width: "50vw", alt: "An image of the exterior of Sip & Play NYC",
-            height: "60vh", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
-          }} className="container mx-auto p-4">
-          </div>
+          <div
+  style={{
+    backgroundImage: `url(${require("./sips.jpg")})`,
+    width: "50vw",
+    height: "60vh",
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+  className="container mx-auto p-4"
+>
+</div>
         </div>
       </div>
 

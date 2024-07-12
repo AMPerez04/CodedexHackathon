@@ -1,50 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #C6DDF0;
+  color: black;
+}
 
-  .navbar {
-    background-color: #DBB1BC;
-    color: white;
-    text-align: center;
-    padding: 1px 0;
+.navbar {
+  background-color: #4e598c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10vh auto;
+  width: 80vw;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 65px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+.end {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  margin-top: 10vh;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 45px;
   }
 
   .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10vh;
-    width: 80vw;
+    flex-direction: column;
+    width: 90vw;
+    margin: 5vh auto;
   }
-  
-  .overlay {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header-title {
-    color: white;
-    font-size: 65px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-family: 'Lobster', cursive;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #DEE9D3;
-    color:black;
 
+  .navbar {
+    flex-direction: column;
   }
- 
-  .end{
-    text-align: center;
+
+  .navbar a {
+    margin: 5px 0;
   }
-  h1{
-    text-align: left;
-    margin-top: 10vh;
-    font-size: 2.5rem;
-    font-weight: bold;
+
+  .reservation-button {
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
   }
+}
+
+.reservation-button {
+  padding: 10px 20px;
+  background-color: #DEE9D3;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  height: 100px;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 10px;
+}
