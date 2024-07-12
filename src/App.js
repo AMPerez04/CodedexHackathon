@@ -22,7 +22,7 @@ function App() {
 	const filterItems = (category) => {
 	setActiveCategory(category);
 	
-	if (category === "all") {
+	if (category === "All") {
 		setMenuItems(items);
 		return;
 	}

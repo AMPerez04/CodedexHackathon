@@ -1,8 +1,8 @@
-import React, { useRef, useState, useEffect, useMemo } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useDrag } from '@use-gesture/react';
-import useLoadModels from './useLoadModels';
 import * as THREE from 'three';
+import { loadModels, computeScaleFactors } from './modelUtils';
 
 const models = [
     './models/Boba.glb',
@@ -19,12 +19,10 @@ const Carousel = () => {
     const radius = 3;
     const numItems = models.length;
 
-    // Load models
-    const loadedModels = useLoadModels(models);
+    const [loadedModels, setLoadedModels] = useState([]);
     const [mainBounds, setMainBounds] = useState(null);
     const [scaleFactors, setScaleFactors] = useState([]);
 
-    // Create the reference cube and calculate bounds
     useEffect(() => {
         const mat = new THREE.MeshLambertMaterial({ color: 0xff0000 });
         const boxGeom = new THREE.BoxGeometry(1, 1, 1);
@@ -37,57 +35,36 @@ const Carousel = () => {
         setMainBounds(bounds);
     }, []);
 
-    // Compute scale factors only when models are loaded and mainBounds are set
     useEffect(() => {
-        if (mainBounds && loadedModels.length) {
-            const factors = loadedModels.map((gltf) => getScaleFactor(gltf.scene));
-            setScaleFactors(factors);
-        }
-    }, [mainBounds, loadedModels]);
-
-    // Helper function to compute scale factor
-    const getScaleFactor = (object) => {
-        const bbox = new THREE.Box3().setFromObject(object);
-
-        if (!mainBounds) return 1;
-
-        const lengthSceneBounds = {
-            x: Math.abs(mainBounds.max.x - mainBounds.min.x),
-            y: Math.abs(mainBounds.max.y - mainBounds.min.y),
-            z: Math.abs(mainBounds.max.z - mainBounds.min.z),
+        const init = async () => {
+            const storedScaleFactors = localStorage.getItem('scaleFactors');
+            if (storedScaleFactors) {
+                setScaleFactors(JSON.parse(storedScaleFactors));
+            } else {
+                if (mainBounds) {
+                    const factors = await computeScaleFactors(mainBounds);
+                    setScaleFactors(factors);
+                    localStorage.setItem('scaleFactors', JSON.stringify(factors));
+                }
+            }
+            const models = await loadModels();
+            setLoadedModels(models);
         };
 
-        const lengthMeshBounds = {
-            x: Math.abs(bbox.max.x - bbox.min.x),
-            y: Math.abs(bbox.max.y - bbox.min.y),
-            z: Math.abs(bbox.max.z - bbox.min.z),
-        };
+        init();
+    }, [mainBounds]);
 
-        const lengthRatios = [
-            lengthSceneBounds.x / lengthMeshBounds.x,
-            lengthSceneBounds.y / lengthMeshBounds.y,
-            lengthSceneBounds.z / lengthMeshBounds.z,
-        ];
-
-        let minRatio = Math.min(...lengthRatios);
-        const padding = 0; // Adjust if needed
-        minRatio -= padding;
-
-        return minRatio;
-    };
-
-    // Rotate the carousel
     useFrame(() => {
         if (!isDragging.current) {
-            groupRef.current.rotation.y += 0.005;
+            groupRef.current.rotation.y += 0.001;
         }
     });
 
-    // Handle drag interaction
     const bind = useDrag(({ movement: [mx], down }) => {
         isDragging.current = down;
-        groupRef.current.rotation.y += mx * 0.0001; // Adjust sensitivity as needed
+        groupRef.current.rotation.y += mx * 0.0001;
     });
+
     return (
         <group ref={groupRef} {...bind()}>
             {mainBounds && scaleFactors.length === loadedModels.length && loadedModels.map((gltf, index) => {
@@ -95,15 +72,14 @@ const Carousel = () => {
                 const x = radius * Math.cos(angle);
                 const z = radius * Math.sin(angle);
 
-                // Use precomputed scale factor
                 const scaleFactor = scaleFactors[index];
 
                 return (
                     <primitive
                         key={index}
                         object={gltf.scene}
-                        position={[x, 0, z]} // Adjust the height position
-                        rotation={[0, angle, 0]} // Ensure the model faces the center
+                        position={[x, 0, z]}
+                        rotation={[0, angle, 0]}
                         scale={[scaleFactor, scaleFactor, scaleFactor]}
                     />
                 );

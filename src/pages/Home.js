@@ -13,7 +13,7 @@ function Home() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="container mx-auto p-4"
+        
       >
         <div className="overlay">
           <h1 className="header-title">SIP & PLAY</h1>
