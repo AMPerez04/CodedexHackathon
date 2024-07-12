@@ -3,7 +3,7 @@ import './Feedback.css';
 
 function Feedback() {
   return (
-    <div className="container">
+    <div style={{width:"100vw"}} className="container">
       <div className='section'>
         <div className="text-center">
           <h1 className='res'>Feedback</h1>
