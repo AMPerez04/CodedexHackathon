@@ -10,23 +10,23 @@ import About from './pages/About.js';
 function App() {
 	return (
 		<Router>
-			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C' }}>
+			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw"}}>
 				<div className="bg-white rounded-full w-20 h-20 flex items-center justify-center m-4 shadow-lg">
 					<img src={require('./sipnplay.png')} alt="Logo" className="w-20 h-20" />
 				</div>
 				<nav className="ml-auto">
-					<ul className="flex space-x-6">
+					<ul className="flex space-x-12">
 						<li>
-							<Link to="/" className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
+							<Link to="/" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
 						</li>
 						<li>
-							<Link to="/calendar" className="text-white text-lg hover:text-gray-400 transition duration-300">Event Calendar</Link>
+							<Link to="/calendar" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Events</Link>
 						</li>
 						<li>
-							<Link to="/menu" className="text-white text-lg hover:text-gray-400 transition duration-300">Menu</Link>
+							<Link to="/menu" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Menu</Link>
 						</li>
 						<li>
-							<Link to="/three" className="text-white text-lg hover:text-gray-400 transition duration-300">About</Link>
+							<Link to="/about" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">About</Link>
 						</li>
 					</ul>
 				</nav>
@@ -41,6 +41,13 @@ function App() {
 
 
 	);
+}
+
+const styles = {
+	menuItem: {
+		fontSize: '2rem',
+
+	}
 }
 
 export default App;
