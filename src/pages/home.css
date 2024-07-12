@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #C6DDF0;
@@ -15,7 +15,7 @@ body {
     color: white;
     text-align: center;
     margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -54,7 +54,7 @@ body {
     font-family: 'Lobster', cursive;
   }
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #4E598C;
@@ -107,14 +107,7 @@ body {
     color: orange;
     text-decoration: underline;
   }
-
-  .end {
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-
-
-  }
+  
 .section {
   display: flex;
   flex-direction: row;
@@ -138,7 +131,7 @@ body {
   color: white;
   font-size: 65px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  font-family: 'Lobster', cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -191,4 +184,8 @@ h1 {
   width: 200px;
   font-size: 20px;
   margin-top: 10px;
+}
+
+.say{
+  font-size: 1rem;
 }

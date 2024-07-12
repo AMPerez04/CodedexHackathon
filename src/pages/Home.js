@@ -35,10 +35,10 @@ function Home() {
       <div id="hours" className="section">
         <div style={{ alignItems: "left", justifyContent: "flex-start" }}>
           <h1 style={{}}>WHAT ARE OUR HOURS?</h1>
-          <p>New opening hours:</p>
-          <p>Sunday: 10AM-11PM</p>
-          <p>Mon-Thurs: 11AM-11PM</p>
-          <p>Fri: 11AM-Midnight</p>
+          <p className='words'>New opening hours:</p>
+          <p className='words'>Sunday: 10AM-11PM</p>
+          <p className='words'>Mon-Thurs: 11AM-11PM</p>
+          <p className='words'>Fri: 11AM-Midnight</p>
           <p>Sat: 10AM-Midnight</p>
           <p>Our kitchen closes 2.5-3 hours before we close!</p>
         </div>
@@ -50,7 +50,7 @@ function Home() {
         <img className='image' style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/map.png')} />
         <div>
           <h1>WHERE ARE WE LOCATED?</h1>
-          <p>471 5th Ave.</p>
+          <p className='say'>471 5th Ave.</p>
           <p>Brooklyn, NY 11215</p>
           <p>Email: sipnplaynyc@mail.com</p>
           <p>Phone: 718-971-1684</p>

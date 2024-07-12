@@ -1,46 +1,69 @@
+/* Reserve.css */
+.container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-.navbar {
-    background-color: #DBB1BC;
-    color: white;
-    text-align: center;
-    padding: 1px 0;
-  }
+.section {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-  .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10vh;
-    width: 80vw;
-  }
-  .header-title {
-    color: white;
-    font-size: 65px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-family: 'Lobster', cursive;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #DEE9D3;
-    color:black;
-  }
- 
-  .end{
-    text-align: center;
-  }
-  h1{
-    text-align: left;
-    margin-top: 10vh;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  .reserve-background {
-    width: 100vw;
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
+.text-center {
+  text-align: center;
+}
+
+.headers {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wor {
+  font-size: 1.2rem;
+  color: black;
+  margin: 0.5rem 0;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.reserve-button {
+  padding: 10px 20px;
+  background-color: #4E598C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  font-size: 1rem;
+  margin: 20px auto;
+}
+
+.reserve-button:hover {
+  background-color: #3b4375;
+}
+
+.reserve-background {
+  width: 50vw;
+  height: 60vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #b4bad5;
+  color: black;
+}
