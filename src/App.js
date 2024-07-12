@@ -6,6 +6,10 @@ import Home from './pages/Home';
 import EventCalendar from './pages/EventCalendar';
 import Menu from './pages/Menu';
 import About from './pages/About.js';
+import Library from './pages/Library.js';
+import Reserve from './pages/Reserve';
+import Feedback from './pages/Feedback';
+
 import items from './data';
 
 const allCategories = ["All", ...new Set(items.map((item) => item.category))];
@@ -28,23 +32,32 @@ function App() {
 	};
 	return (
 		<Router>
-			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C' }}>
+			<div className="flex items-center bg-gray-800 p-4" style={{ backgroundColor: '#4E598C', height: '10vh', paddingLeft: '5vw', paddingRight: "10vw", zIndex: 1000}}>
 				<div className="bg-white rounded-full w-20 h-20 flex items-center justify-center m-4 shadow-lg">
 					<img src={require('./sipnplay.png')} alt="Logo" className="w-20 h-20" />
 				</div>
 				<nav className="ml-auto">
-					<ul className="flex space-x-6">
-						<li>
-							<Link to="/" className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
+					<ul className="flex space-x-12">
+					<li>
+							<Link to="/" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Home</Link>
 						</li>
 						<li>
-							<Link to="/calendar" className="text-white text-lg hover:text-gray-400 transition duration-300">Event Calendar</Link>
+							<Link to="/calendar" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Events</Link>
 						</li>
 						<li>
-							<Link to="/menu" className="text-white text-lg hover:text-gray-400 transition duration-300">Menu</Link>
+							<Link to="/menu" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Menu</Link>
 						</li>
 						<li>
-							<Link to="/three" className="text-white text-lg hover:text-gray-400 transition duration-300">About</Link>
+							<Link to="/about" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">About</Link>
+						</li>
+						<li>
+							<Link to="/library" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">3D-Library</Link>
+						</li>
+						<li>
+							<Link to="/reserve" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Reserve</Link>
+						</li>
+						<li>
+							<Link to="/feedback" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">Feedback</Link>
 						</li>
 					</ul>
 				</nav>
@@ -58,11 +71,21 @@ function App() {
 					activeCategory={activeCategory} 
 					categories={categories} />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/library" element={<Library />} />
+				<Route path="/reserve" element={<Reserve />} />
+				<Route path="/feedback" element={<Feedback/>} />
 			</Routes>
 		</Router>
 
 
 	);
+}
+
+const styles = {
+	menuItem: {
+		fontSize: '2rem',
+
+	}
 }
 
 export default App;
