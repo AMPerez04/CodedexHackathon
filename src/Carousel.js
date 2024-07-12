@@ -6,17 +6,17 @@ import { loadModels, computeScaleFactors } from './modelUtils';
 
 const models = [
     './models/Boba.glb',
-    './models/Vroom.glb',
     './models/Latte.glb',
+    './models/Pizza.glb',
     './models/Boba.glb',
-    './models/Vroom.glb',
     './models/Latte.glb',
+    './models/Pizza.glb',
 ];
 
 const Carousel = () => {
     const groupRef = useRef();
     const isDragging = useRef(false);
-    const radius = 3;
+    const radius = 2;
     const numItems = models.length;
 
     const [loadedModels, setLoadedModels] = useState([]);

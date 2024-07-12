@@ -59,7 +59,7 @@ h4 {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    width: 70vh;
+    width: 60vw;
 
 }
 
@@ -101,7 +101,8 @@ h4 {
 
 .menu-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 50vw;
     gap: 20px;
     padding: 20px;
   }
@@ -110,7 +111,7 @@ h4 {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
+    padding: 24px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow:  2px 4px rgba(0, 0, 0, 0.1);
   }
