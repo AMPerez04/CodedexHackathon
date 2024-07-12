@@ -3,11 +3,11 @@ import * as THREE from 'three';
 
 const models = [
     './models/Boba.glb',
-    './models/Vroom.glb',
     './models/Latte.glb',
+    './models/Pizza.glb',
     './models/Boba.glb',
-    './models/Vroom.glb',
     './models/Latte.glb',
+    './models/Pizza.glb',
 ];
 
 // Function to load GLTF models
