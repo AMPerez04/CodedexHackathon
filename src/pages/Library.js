@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useLoader  } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Shelf from '../components/Shelf';
 import BoardGame from '../components/BoardGame';
@@ -9,6 +9,7 @@ import * as THREE from 'three';
 function Library() {
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
+  const brickTexture = useLoader(THREE.TextureLoader, '/assets/brick.jpg');
 
   return (
     <div style={{ height: '90vh', display: 'flex', flexDirection: 'row' }}>
@@ -35,25 +36,25 @@ function Library() {
 
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
           <planeGeometry args={[10, 10]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial color="grey" />
         </mesh>
 
         {/* Walls */}
         <mesh position={[0, -1.5, -5]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[0, -1.5, 5]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[-5, -1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
         <mesh position={[5, -1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
           <boxGeometry args={[10, 25, 0.1]} />
-          <meshStandardMaterial color="lightgray" />
+          <meshStandardMaterial map={brickTexture} />
         </mesh>
 
         {/* middle */}
