@@ -42,12 +42,12 @@ function Home() {
           <p>Sat: 10AM-Midnight</p>
           <p>Our kitchen closes 2.5-3 hours before we close!</p>
         </div>
-        <img style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/sippy.png')} />
+        <img className='image' style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/sippy.png')} />
       </div>
 
       {/* Where we are */}
       <div style={{ justifyContent: 'space-between' }} id='location' className="section">
-        <img style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/map.png')} />
+        <img className='image' style={{ width: '100vh', borderRadius: '5rem' }} src={require('../assets/map.png')} />
         <div>
           <h1>WHERE ARE WE LOCATED?</h1>
           <p>471 5th Ave.</p>
@@ -118,13 +118,13 @@ function Home() {
             <li>7/29 Bloomburrow Pre-release 6pm - <a className="register" href="https://square.link/u/yXIMpJzp" target="_blank" rel="noopener noreferrer">Register</a></li>
           </ul>
         </div>
-        <img src={require("../bloom.jpg")}></img>
+        <img className='image' style={{borderRadius: '5rem' }}src={require("../bloom.jpg")}></img>
 
       </div>
 
       {/* Disney Lorcana */}
       <div id='disney-lorcana' className="section">
-        <img src={require("../dis.jpg")}></img>
+        <img className='image' src={require("../dis.jpg")} style={{borderRadius: '5rem' }}></img>
         <div style={{margin: '0 0 0 5rem'}}>
           <h1>Disney Lorcana Event</h1>
           <p>
