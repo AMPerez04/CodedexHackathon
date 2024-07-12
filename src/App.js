@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import EventCalendar from './pages/EventCalendar';
 import Menu from './pages/Menu';
 import About from './pages/About.js';
+import Library from './pages/Library.js';
 
 function App() {
 	return (
@@ -28,6 +29,9 @@ function App() {
 						<li>
 							<Link to="/about" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">About</Link>
 						</li>
+						<li>
+							<Link to="/library" style={styles.menuItem} className="text-white text-lg hover:text-gray-400 transition duration-300">3D-Library</Link>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -36,6 +40,7 @@ function App() {
 				<Route path="/calendar" element={<EventCalendar />} />
 				<Route path="/menu" element={<Menu />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/library" element={<Library />} />
 			</Routes>
 		</Router>
 
